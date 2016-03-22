@@ -1,9 +1,13 @@
 
+<div class="jumbotron">
+  <h2>Kwota na paragonie <span class="label label-success">{{model.cost}}</span> PLN</h2>
+</div>
+
 <form class="form-horizontal">
   <div class="form-group">
     <label class="col-xs-3">Wartość przedmiotu sporu</label>
     <div class="col-xs-9">
-      <input type="text" class="form-control" placeholder="Podaj kwotę" />
+      {{input type="number" min="0" value=model.litigationValue class="form-control" placeholder="Podaj kwotę" }}
     </div>
     
     <label class="col-xs-3">Wyrażoną</label>
@@ -18,12 +22,12 @@
     
     <label class="col-xs-3">Koszt wynajmu sali</label>
     <div class="col-xs-9">
-      <input type="text" class="form-control" placeholder="Podaj kwotę" />
+      {{input type="number" min="0" value=model.roomRentFee class="form-control" placeholder="Podaj kwotę" }}
     </div>
     
     <label class="col-xs-3">Uwzględniając koszty</label>
     <div class="col-xs-9">
-      <input type="text" class="form-control" placeholder="Podaj kwotę" />
+      {{input type="number" min="0" value=model.sessionFee class="form-control" placeholder="Podaj kwotę" }}
     </div>
     
     <label class="col-xs-3">Koszty podziel równo na</label>
@@ -35,10 +39,6 @@
         <option>5 osób</option>
       </select>
     </div>
-  </div>
-  
-  <div class="form-group">
-    <button type="button" class="btn btn-success disabled col-xs-12">Policz</button>
   </div>
 
 </form>
