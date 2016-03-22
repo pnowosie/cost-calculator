@@ -1,0 +1,44 @@
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label class="col-xs-3">Wartość przedmiotu sporu</label>
+    <div class="col-xs-9">
+      <input type="text" class="form-control" placeholder="Podaj kwotę" />
+    </div>
+    
+    <label class="col-xs-3">Wyrażoną</label>
+    <div class="btn-group col-xs-9" data-toggle="buttons">
+	  <label class="btn btn-default col-xs-6 active">
+	    <input name="at" value="Brutto" type="radio">Brutto
+	  </label>
+	  <label class="btn btn-default col-xs-6">
+	    <input name="at" value="Netto" type="radio">Netto
+	  </label>
+    </div>
+    
+    <label class="col-xs-3">Koszt wynajmu sali</label>
+    <div class="col-xs-9">
+      <input type="text" class="form-control" placeholder="Podaj kwotę" />
+    </div>
+    
+    <label class="col-xs-3">Uwzględniając koszty</label>
+    <div class="col-xs-9">
+      <input type="text" class="form-control" placeholder="Podaj kwotę" />
+    </div>
+    
+    <label class="col-xs-3">Koszty podziel równo na</label>
+    <div class="col-xs-9">
+      <select class="selectpicker form-control" data-style="btn-inverse" ><!--style="display: none;"-->
+        <option>2 osoby</option>
+        <option>3 osoby</option>
+        <option>4 osoby</option>
+        <option>5 osób</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <button type="button" class="btn btn-success disabled col-xs-12">Policz</button>
+  </div>
+
+</form>
