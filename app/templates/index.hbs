@@ -10,7 +10,7 @@
       {{input type="number" min="0" value=model.litigationValue class="form-control" placeholder="Podaj kwotę" }}
     </div>
     
-    <label class="col-xs-3">Wyrażoną</label>
+    <!--<label class="col-xs-3">Wyrażoną</label>
     <div class="btn-group col-xs-9" data-toggle="buttons">
 	  <label class="btn btn-default col-xs-6 active">
 	    <input name="at" value="Brutto" type="radio">Brutto
@@ -18,27 +18,29 @@
 	  <label class="btn btn-default col-xs-6">
 	    <input name="at" value="Netto" type="radio">Netto
 	  </label>
-    </div>
+    </div>-->
     
     <label class="col-xs-3">Koszt wynajmu sali</label>
     <div class="col-xs-9">
       {{input type="number" min="0" value=model.roomRentFee class="form-control" placeholder="Podaj kwotę" }}
     </div>
     
-    <label class="col-xs-3">Uwzględniając koszty</label>
+    <label class="col-xs-3">Koszty operacyjne</label>
     <div class="col-xs-9">
       {{input type="number" min="0" value=model.sessionFee class="form-control" placeholder="Podaj kwotę" }}
     </div>
     
     <label class="col-xs-3">Koszty podziel równo na</label>
     <div class="col-xs-9">
-      <select class="selectpicker form-control" data-style="btn-inverse" ><!--style="display: none;"-->
-        <option>2 osoby</option>
-        <option>3 osoby</option>
-        <option>4 osoby</option>
-        <option>5 osób</option>
+      <select class="selectpicker form-control" data-style="btn-inverse" >
+        <option {{action "selectedParticipant" model 2}} value="2">2 osoby</option>
+        <option {{action "selectedParticipant" model 3}} value="3">3 osoby</option>
+        <option {{action "selectedParticipant" model 4}} value="4">4 osoby</option>
+        <option {{action "selectedParticipant" model 5}} value="5">5 osób</option>
       </select>
     </div>
   </div>
+  <!-- {{action "selectParticipants" on="change"}} target.value -->
+  <!--<button {{action "selectParticipants" 2}}>Click</button>-->
 
 </form>
