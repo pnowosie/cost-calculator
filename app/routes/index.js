@@ -24,8 +24,7 @@ const Mediation = Ember.Object.extend({
 export default Ember.Route.extend({
   actions: {
     selectedParticipant(model, value) {
-      model.set('participants', Number(value))
-      console.log(value);
+      model.set('participants', Number(value));
     }
   }, 
   model() {

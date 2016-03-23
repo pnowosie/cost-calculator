@@ -1,6 +1,6 @@
 
 <div class="jumbotron">
-  <h2>Kwota na paragonie <span class="label label-success">{{model.cost}}</span> PLN</h2>
+  <h2>Kwota na paragonie <span class="label label-success">{{format-number model.cost format="0.00"}}</span> PLN</h2>
 </div>
 
 <form class="form-horizontal">
@@ -9,17 +9,7 @@
     <div class="col-xs-9">
       {{input type="number" min="0" value=model.litigationValue class="form-control" placeholder="Podaj kwotę" }}
     </div>
-    
-    <!--<label class="col-xs-3">Wyrażoną</label>
-    <div class="btn-group col-xs-9" data-toggle="buttons">
-	  <label class="btn btn-default col-xs-6 active">
-	    <input name="at" value="Brutto" type="radio">Brutto
-	  </label>
-	  <label class="btn btn-default col-xs-6">
-	    <input name="at" value="Netto" type="radio">Netto
-	  </label>
-    </div>-->
-    
+
     <label class="col-xs-3">Koszt wynajmu sali</label>
     <div class="col-xs-9">
       {{input type="number" min="0" value=model.roomRentFee class="form-control" placeholder="Podaj kwotę" }}
@@ -40,7 +30,5 @@
       </select>
     </div>
   </div>
-  <!-- {{action "selectParticipants" on="change"}} target.value -->
-  <!--<button {{action "selectParticipants" 2}}>Click</button>-->
 
 </form>
